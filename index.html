@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Love Page 💖</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+  <audio autoplay loop>
+  <source src="love-music.mp3" type="audio/mp3">
+</audio>
+
+
+  <div class="card">
+    <h1>💗shivuu💗</h1>
+
+     <p class="typewriter" id="loveText"></p>
+
+    <button onclick="showLoveMessage()">💌 Send Love</button>
+
+  </div>
+ <script>
+function showLoveMessage() {
+  const popup = document.createElement('div');
+  popup.innerText = "Tum meri life ki sabse special person ho 💖";
+
+  popup.style.position = 'fixed';
+  popup.style.top = '50%';
+  popup.style.left = '50%';
+  popup.style.transform = 'translate(-50%, -50%)';
+  popup.style.background = 'rgba(255, 77, 109, 0.9)';
+  popup.style.color = '#fff';
+  popup.style.padding = '25px 40px';
+  popup.style.borderRadius = '20px';
+  popup.style.fontSize = '18px';
+  popup.style.textAlign = 'center';
+  popup.style.zIndex = 100;
+  popup.style.animation = 'popupAnime 1s ease forwards';
+  document.body.appendChild(popup);
+
+  setTimeout(() => { popup.remove(); }, 2000);
+}
+</script>
+
+<script>
+function showLoveMessage() {
+  alert("💖I LOVE YOUU BALA💖");
+}
+</script>
+
+<p class="typewriter" id="loveFinal"></p>
+
+<script>
+const finalText = "Tu Maza life madhli ek khup important person ahe 🥹💖";
+const loveFinal = document.getElementById("loveFinal");
+let j = 0;
+
+function typeFinal() {
+  if (j < finalText.length) {
+    loveFinal.innerHTML += finalText.charAt(j);
+    j++;
+    setTimeout(typeFinal, 150);
+  }
+}
+
+// Delay start after previous typewriter finishes
+setTimeout(typeFinal, 4000); // 4 seconds delay
+</script>
+
+<script>
+function createSparkle() {
+  const sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+  sparkle.innerText = '✨';
+  sparkle.style.left = Math.random() * window.innerWidth + 'px';
+  sparkle.style.fontSize = Math.random() * 15 + 10 + 'px';
+  document.body.appendChild(sparkle);
+  
+  setTimeout(() => { sparkle.remove(); }, 3000);
+}
+
+setInterval(createSparkle, 400);
+</script>
+
+
+</body>
+</html>
+
